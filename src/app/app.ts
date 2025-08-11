@@ -6,10 +6,11 @@ import { SecondaryButton } from './components/secondary-button/secondary-button'
 import { CommonModule } from '@angular/common';
 import { ItemCertificate } from "./components/item-certificate/item-certificate";
 import { BaseUi } from "./components/base-ui/base-ui";
+import { Certificates } from "./pages/certificates/certificates";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Navbar, PrimaryButton, SecondaryButton, CommonModule, ItemCertificate, BaseUi],
+  imports: [RouterOutlet, Navbar, PrimaryButton, SecondaryButton, CommonModule, ItemCertificate, BaseUi, Certificates],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
