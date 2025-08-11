@@ -1,0 +1,14 @@
+.navbar {
+  background-color: #ffffff;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.navbar-logo img {
+  width: 40px;
+  height: 40px;
+}
+
+.active {
+  color: #3b5ac2;
+}
