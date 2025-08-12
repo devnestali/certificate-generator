@@ -7,10 +7,11 @@ import { CommonModule } from '@angular/common';
 import { ItemCertificate } from "./components/item-certificate/item-certificate";
 import { BaseUi } from "./components/base-ui/base-ui";
 import { Certificates } from "./pages/certificates/certificates";
+import { CertificateForm } from "./pages/certificate-form/certificate-form";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Navbar, PrimaryButton, SecondaryButton, CommonModule, ItemCertificate, BaseUi, Certificates],
+  imports: [RouterOutlet, Navbar, PrimaryButton, SecondaryButton, CommonModule, ItemCertificate, BaseUi, Certificates, CertificateForm],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

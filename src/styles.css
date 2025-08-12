@@ -1,1 +1,21 @@
-/* You can add global styles to this file, and also import other style files */
+.custom-title {
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 1.75rem;
+  letter-spacing: 0;
+  text-align: center;
+}
+
+.custom-subtitle {
+  font-weight: 400;
+  font-size: 0.85rem;
+  letter-spacing: 0;
+  text-align: center;
+  color: #64748b;
+}
+
+.content-titles {
+  height: 3.75rem;
+  gap: 4px;
+  margin-bottom: 2rem;
+}

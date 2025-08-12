@@ -1,0 +1,27 @@
+.custom-card {
+  max-width: 672px;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  padding: 2rem;
+}
+
+.card-title {
+  font-weight: 700;
+  font-size: 1.25rem;
+  line-height: 2.75rem;
+  letter-spacing: 0;
+  color: #1a2856;
+  margin-bottom: 1rem;
+}
+
+.items-group {
+  margin-bottom: 2rem;
+}
+
+label {
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  letter-spacing: 0;
+  color: #1a2856;
+}
