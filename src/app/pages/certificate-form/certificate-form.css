@@ -25,3 +25,43 @@ label {
   letter-spacing: 0;
   color: #1a2856;
 }
+
+.custom-input {
+  height: 2.5rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  padding: 0.5rem 0.75rem;
+}
+
+.items-list {
+  width: 100%;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.items-list hr {
+  all: unset;
+  display: block;
+  height: 1px;
+  margin: 12px 0;
+  background-color: #e2e8f0;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.remove-btn i {
+  padding: 5.75px;
+  color: #e95f5f;
+  cursor: pointer;
+  font-size: 12.5px;
+}
+
+.remove-btn i:hover {
+  background-color: #e2e8f0;
+  border-radius: 4px;
+}
