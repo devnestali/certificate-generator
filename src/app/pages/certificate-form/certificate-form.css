@@ -42,6 +42,26 @@ label {
   color: #3b5ac2;
 }
 
+.error-message {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: #d71d1d;
+  margin-top: 8px;
+}
+
+.error-message p {
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 1rem;
+  letter-spacing: 0;
+  vertical-align: middle;
+}
+
+.custom-input-group:has(.error-message) > label {
+  color: #d71d1d;
+}
+
 .items-list {
   width: 100%;
   border: 1px solid #e2e8f0;
