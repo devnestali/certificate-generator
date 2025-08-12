@@ -58,3 +58,7 @@
   letter-spacing: 0;
   color: #1a2856;
 }
+
+.list-certificates {
+  max-width: 672px;
+}
