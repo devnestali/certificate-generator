@@ -6,15 +6,15 @@
   <div class="custom-card w-100">
     <h2 class="card-title">Nuevo certificado</h2>
 
-    <div class="mb-3">
-      <label class="form-label">Nombre</label>
-      <input type="text" class="form-control custom-input" placeholder="Nombre del alumno">
+    <div class="mb-3 custom-input-group">
+      <label class="form-label" for="name">Nombre</label>
+      <input type="text" class="form-control custom-input" placeholder="Nombre del alumno" id="name">
     </div>
 
-    <div class="mb-3 d-flex align-items-end">
+    <div class="mb-3 d-flex align-items-end custom-input-group">
       <div class="flex-grow-1 me-2">
-        <label class="form-label">Actividad</label>
-        <input type="text" class="form-control custom-input" placeholder="Actividad realizada">
+        <label class="form-label" for="activity">Actividad</label>
+        <input type="text" class="form-control custom-input" placeholder="Actividad realizada" id="activity">
       </div>
       <app-secondary-button></app-secondary-button>
     </div>

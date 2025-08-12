@@ -33,6 +33,15 @@ label {
   padding: 0.5rem 0.75rem;
 }
 
+.custom-input:focus {
+  border: 1px solid #3b5ac2;
+  box-shadow: none;
+}
+
+.custom-input-group:has(input:focus) label {
+  color: #3b5ac2;
+}
+
 .items-list {
   width: 100%;
   border: 1px solid #e2e8f0;
