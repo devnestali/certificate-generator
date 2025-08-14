@@ -1,18 +1,18 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Navbar } from "./components/navbar/navbar";
-import { PrimaryButton } from "./components/primary-button/primary-button";
-import { SecondaryButton } from './components/secondary-button/secondary-button';
+
+
 import { CommonModule } from '@angular/common';
-import { ItemCertificate } from "./components/item-certificate/item-certificate";
+
 import { BaseUi } from "./components/base-ui/base-ui";
-import { Certificates } from "./pages/certificates/certificates";
-import { CertificateForm } from "./pages/certificate-form/certificate-form";
-import { Certificate } from "./pages/certificate/certificate";
+
+
+
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Navbar, PrimaryButton, SecondaryButton, CommonModule, ItemCertificate, BaseUi, Certificates, CertificateForm, Certificate],
+  imports: [RouterOutlet, Navbar, CommonModule, BaseUi],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
