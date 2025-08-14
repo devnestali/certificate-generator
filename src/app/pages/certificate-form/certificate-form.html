@@ -8,7 +8,7 @@
 
     <div class="mb-3 custom-input-group">
       <label class="form-label" for="name">Nombre</label>
-      <input type="text" class="form-control custom-input" placeholder="Nombre del alumno" id="name">
+      <input [(ngModel)]="name" type="text" class="form-control custom-input" placeholder="Nombre del alumno" id="name">
       <div class="error-message">
         <i class="ph ph-warning-circle"></i>
         <p class="m-0">Error message</p>
@@ -18,7 +18,7 @@
     <div class="mb-3 d-flex align-items-end custom-input-group">
       <div class="flex-grow-1 me-2">
         <label class="form-label" for="activity">Actividad</label>
-        <input type="text" class="form-control custom-input" placeholder="Actividad realizada" id="activity">
+        <input [(ngModel)]="activity" type="text" class="form-control custom-input" placeholder="Actividad realizada" id="activity">
       </div>
       <app-secondary-button></app-secondary-button>
     </div>
@@ -26,26 +26,17 @@
     <div class="items-group">
       <label class="form-label">Lista de actividades</label>
       <div class="items-list w-100">
-          <div class="item">
-            <span class="item-text">Configuración con Angular CLI</span>
+          @for (activity of activityList; track $index) {
+            <div class="item">
+            <span class="item-text">{{activity}}</span>
             <div class="remove-btn">
               <i class="ph-bold ph-x"></i>
             </div>
           </div>
-          <hr>
-          <div class="item">
-            <span class="item-text">Configuración con Angular CLI</span>
-            <div class="remove-btn">
-              <i class="ph-bold ph-x"></i>
-            </div>
-          </div>
-          <hr>
-          <div class="item">
-            <span class="item-text">Configuración con Angular CLI</span>
-            <div class="remove-btn">
-              <i class="ph-bold ph-x"></i>
-            </div>
-          </div>
+          @if ($index + 1 != activityList.length) {
+            <hr>
+          }
+          }
       </div>
     </div>
 
