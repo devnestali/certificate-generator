@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { SecondaryButton } from "../../components/secondary-button/secondary-button";
 import { ItemCertificate } from "../../components/item-certificate/item-certificate";
 
 @Component({
@@ -9,5 +8,4 @@ import { ItemCertificate } from "../../components/item-certificate/item-certific
   styleUrl: './certificates.css'
 })
 export class Certificates {
-
 }
