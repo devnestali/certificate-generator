@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
 .certificate-menu {
   max-width: 50rem;
 }
@@ -66,7 +68,7 @@
   font-weight: 900;
   font-size: 1.5rem;
   line-height: 160%;
-  letter-spacing: 10%;
+  letter-spacing: 2.4px;
   color: #1a2856;
 }
 
@@ -81,6 +83,7 @@
 }
 
 .student-name {
+  font-family: "Dancing Script", sans-serif;
   text-align: center;
   font-weight: 700;
   font-size: 3.25rem;
