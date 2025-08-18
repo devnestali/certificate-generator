@@ -4,6 +4,7 @@ import { PrimaryButton } from "../../components/primary-button/primary-button";
 import { FormsModule, NgModel } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { CertificateProps } from '../../interfaces/certificate';
+import { CertificateService } from '../../services/certificate';
 
 @Component({
   selector: 'app-certificate-form',
@@ -19,6 +20,8 @@ export class CertificateForm {
     activityList: [],
     date: ''
   };
+
+  constructor(private certificateService: CertificateService) {}
 
   invalidField(control: NgModel) {
     return control.invalid && control.touched
@@ -43,7 +46,8 @@ export class CertificateForm {
     }
 
     this.certificate.date = this.handleCurrentDate()
-    console.log(this.certificate)
+
+    this.certificateService.addCertificate(this.certificate)
   }
 
   handleCurrentDate() {
