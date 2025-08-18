@@ -26,6 +26,7 @@
         buttonText="Añadir"
         phClass="ph ph-plus"
         [disabled]="activity.length == 0"
+        (click)="addActivityToList()"
       ></app-secondary-button>
     </div>
 
@@ -35,7 +36,7 @@
           @for (activity of activityList; track $index) {
             <div class="item">
             <span class="item-text">{{activity}}</span>
-            <div class="remove-btn">
+            <div class="remove-btn" (click)="removeActivityToList($index)">
               <i class="ph-bold ph-x"></i>
             </div>
           </div>
