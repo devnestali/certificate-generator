@@ -35,6 +35,10 @@ export class CertificateForm {
   }
 
   addActivityToList() {
+    if(!this.activity) {
+      return
+    }
+
     this.certificate.activityList.push(this.activity)
     this.activity = ''
   }
