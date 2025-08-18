@@ -1,10 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { SecondaryButton } from '../../components/secondary-button/secondary-button';
 import { PrimaryButton } from "../../components/primary-button/primary-button";
-import { FormsModule, NgModel } from '@angular/forms';
+import { FormsModule, NgForm, NgModel } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { CertificateProps } from '../../interfaces/certificate';
 import { CertificateService } from '../../services/certificate';
+import { v4 as uuidv4 } from 'uuid'
 
 @Component({
   selector: 'app-certificate-form',
@@ -16,12 +17,14 @@ export class CertificateForm {
   activity: string = ''
 
   certificate: CertificateProps = {
+    id: '',
     name: '',
     activityList: [],
     date: ''
   };
 
   constructor(private certificateService: CertificateService) {}
+  @ViewChild('form') form!: NgForm
 
   invalidField(control: NgModel) {
     return control.invalid && control.touched
@@ -46,8 +49,12 @@ export class CertificateForm {
     }
 
     this.certificate.date = this.handleCurrentDate()
+    this.certificate.id = uuidv4()
 
     this.certificateService.addCertificate(this.certificate)
+
+    this.certificate = this.handleInitialState()
+    this.form.resetForm()
   }
 
   handleCurrentDate() {
@@ -60,5 +67,14 @@ export class CertificateForm {
     const formattedDate = `${day}/${month}/${year}`
 
     return formattedDate
+  }
+
+  handleInitialState(): CertificateProps {
+    return {
+      id: '',
+      name: '',
+      activityList: [],
+      date: ''
+    }
   }
 }

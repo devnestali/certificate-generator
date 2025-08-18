@@ -25,7 +25,7 @@
       <app-secondary-button
         buttonText="Añadir"
         phClass="ph ph-plus"
-        [disabled]="activity.length == 0"
+        [disabled]="!activity || activity.length == 0"
         (click)="addActivityToList()"
       ></app-secondary-button>
     </div>

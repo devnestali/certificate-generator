@@ -10,7 +10,7 @@ export class CertificateService {
   constructor() {}
 
   addCertificate(certificate: CertificateProps) {
-    this.certificates.push(certificate)
+    this.certificates.push({ ...certificate })
     console.log(this.certificates)
   }
 }
