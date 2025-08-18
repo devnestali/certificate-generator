@@ -1,11 +1,9 @@
-import { Component, signal } from '@angular/core';
+import { Component, OnInit, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Navbar } from "./components/navbar/navbar";
-
-
 import { CommonModule } from '@angular/common';
-
 import { BaseUi } from "./components/base-ui/base-ui";
+import { CertificateService } from './services/certificate';
 
 
 
@@ -16,7 +14,17 @@ import { BaseUi } from "./components/base-ui/base-ui";
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
-export class App {
+export class App implements OnInit{
   protected readonly title = signal('certificate-generator');
   public showNavbar: boolean = true;
+
+  constructor(private certificateService: CertificateService) {}
+
+  ngOnInit(): void {
+    const certificatesOnLocalStorage = localStorage.getItem('@CertificateGenerator:certificates')
+    this.certificateService.certificates =
+      certificatesOnLocalStorage
+      ? JSON.parse(certificatesOnLocalStorage)
+      : []
+  }
 }

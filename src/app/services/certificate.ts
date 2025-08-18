@@ -11,6 +11,9 @@ export class CertificateService {
 
   addCertificate(certificate: CertificateProps) {
     this.certificates.push({ ...certificate })
-    console.log(this.certificates)
+
+    const toObjectJSON = JSON.stringify(this.certificates)
+
+    localStorage.setItem('@CertificateGenerator:certificates', toObjectJSON)
   }
 }
