@@ -4,10 +4,14 @@
     <i class="ph ph-arrow-left"></i>
     <p class="m-0">Volver</p>
   </div>
-  <app-secondary-button buttonText="Descargar" phClass="ph ph-download-simple"></app-secondary-button>
+  <app-secondary-button
+    buttonText="Descargar"
+    phClass="ph ph-download-simple"
+    (click)="downloadCertificate()"
+  ></app-secondary-button>
 </div>
 @if (certificate) {
-  <div class="certificate d-flex align-items-center justify-content-center">
+  <div #certificateContainer class="certificate d-flex align-items-center justify-content-center">
     <img src="certificate/certificate-ribbon.png" alt="icono de medalla" class="medal-icon"/>
     <div class="certificate-content">
       <img src="certificate/certificate-signature.svg" alt="firma" class="signature-icon"/>
