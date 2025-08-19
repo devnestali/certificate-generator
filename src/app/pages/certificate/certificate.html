@@ -4,26 +4,28 @@
     <i class="ph ph-arrow-left"></i>
     <p class="m-0">Volver</p>
   </div>
-  <app-secondary-button></app-secondary-button>
+  <app-secondary-button buttonText="Descargar" phClass="ph ph-download-simple"></app-secondary-button>
 </div>
-<div class="certificate d-flex align-items-center justify-content-center">
-  <img src="certificate/certificate-ribbon.png" alt="icono de medalla" class="medal-icon"/>
-  <div class="certificate-content">
-    <img src="certificate/certificate-signature.svg" alt="firma" class="signature-icon"/>
-    <div class="info-certificate">
-      <div class="title-subtitle-certificate">
-        <h1>CERTIFICADO DE FINALIZACIÓN</h1>
-      <p>Esta certificación prueba que</p>
+@if (certificate) {
+  <div class="certificate d-flex align-items-center justify-content-center">
+    <img src="certificate/certificate-ribbon.png" alt="icono de medalla" class="medal-icon"/>
+    <div class="certificate-content">
+      <img src="certificate/certificate-signature.svg" alt="firma" class="signature-icon"/>
+      <div class="info-certificate">
+        <div class="title-subtitle-certificate">
+          <h1>CERTIFICADO DE FINALIZACIÓN</h1>
+        <p>Esta certificación prueba que</p>
+        </div>
+        <p class="student-name">{{certificate.name}}</p>
+        <div class="student-activities-group">
+          <p class="student-activities-title">Concluyo con suceso las siguientes actividades:</p>
+          <p class="student-activities-list">
+            {{certificate.activityList.join(', ')}}
+          </p>
+        </div>
       </div>
-      <p class="student-name">Ana Silva Lopes</p>
-      <div class="student-activities-group">
-        <p class="student-activities-title">Concluyo con suceso las siguientes actividades:</p>
-        <p class="student-activities-list">
-          Introducción a Angular, Configuración con Angular CLI, Creación de componentes reutilizables, Manipulación de datos, Implementación de enlace de datos, Creación de rutas con Angular Router, Consumo de APIs REST
-        </p>
-      </div>
+      <p class="emission-date">Emitido el {{certificate.date}}</p>
     </div>
-    <p class="emission-date">Emitido el 12/08/2025</p>
   </div>
-</div>
+}
 </div>
